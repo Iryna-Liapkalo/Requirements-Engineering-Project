@@ -1,0 +1,40 @@
+# Week 5 — Activity Diagram: College Equipment Booking System
+
+## 1. Process Modelled
+Create Equipment Booking College Equipment Booking System
+
+## 2. Purpose
+To model the step-by-step process flow for creating an equipment booking, identifying required decision points, and exposing missing business rules regarding equipment unavailability.
+
+## 3. Activities
+1. Select Equipment
+2. Select Date
+3. Check Availability
+4. Enter Booking Detail
+5. Submit Booking
+6. Booking Recorded
+
+## 4. Decision and Guards
+Decision Node: Is equipment available?
+Guards:
+  [available] - Proceed to Enter Booking Details
+  [not available] - Divert to UNKNOWN note
+
+## 5. Unknowns
+The requirements do not specify what should happen when requested equipment is unavailable e.g., placing a hold, joining a waitlist, or suggesting alternative equipment
+
+## 6. Stakeholder Question
+What should happen when the requested equipment is unavailable?
+Target Stakeholder: Equipment Manager / College Facilities Officer.
+
+## 7. Modelling Decision
+Followed strict UML 2.5 standards:
+Initial node solid black circle at the start.
+Rounded rectangles for verb-focused activities.
+Decision node with explicit guards [available] / [not available]
+Did not invent unsupported business logic for unavailable equipment; instead, recorded an UNKNOWN state.
+Final node bullseye at completion.
+
+## 8. Reflection
+What the diagram helped understand: It clearly defined the sequence of actions required from selecting an item to recording a booking.
+Uncertainty revealed: It highlighted that the system behavior for unavailable equipment is currently undefined and requires further stakeholder elicitation.

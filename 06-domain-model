@@ -1,1 +1,77 @@
+# Week 6 — Conceptual Domain Modelling (College Equipment Booking System)
 
+## Part A — Review of Earlier Work
+
+### Task A1: Requirement Evidence Identification
+1. Which requirement tells us that Booking is an important concept
+   FR01:A student can make more than one equipment booking
+2. Which requirement identifies two attributes of Booking
+   FR03: Each booking records a start date and end date
+3. Which requirements indicate relationships involving Staff Member
+   FR04:Staff members review booking requests
+   FR05: Staff members manage equipment availability
+
+
+
+## Part B — Identify Domain Concepts
+
+### Task B1: Candidate Concept Table
+
+| Candidate | Class, Attribute, or Action? | Supporting Requirement |
+| :--- | :--- | :--- |
+| Student | Class | FR01 |
+| Booking | Class | FR01, FR02, FR03 |
+| Start date | Attribute | FR03 |
+| End date | Attribute | FR03 |
+| Equipment | Class | FR01, FR02, FR05 |
+| Review | Action | FR04 |
+| Staff Member | Class | FR04, FR05 |
+
+### Task B2: Core Domain Classes Justification
+1. Student Represents the primary user who requests and holds equipment reservations within the system
+2. Booking: Represents the central domain concept containing reservation dates, status, and item associations
+3. Equipment: Represents the physical resource being reserved and managed for availability
+4. Staff Member: Represents the administrative role responsible for reviewing booking requests and overseeing equipment
+
+### Task B3: Identification of Uncertainty
+Candidate Attribute:emailAddres for Student or status for Booking
+Uncertainty:While recording an email or booking status is logically useful, FR01–FR06 do not explicitly specify how notifications or approval states are stored
+Target Stakeholder: College Facilities Manager / System Administrator
+
+
+
+## Part D & E — Associations, Multiplicities & Open Questions
+
+### Relationships Summary
+Student makes Booking
+Booking identifies Equipment
+Staff Member reviews Booking
+Staff Member manages availability of Equipment
+
+### Confirmed Multiplicity
+FR02: Each booking identifies exactly one equipment item
+Multiplicity of 1 is applied at the Equipment end of the Booking–Equipment association
+
+### Open Questions (Uncertainty Analysis)
+1. Student — Booking: Can a booking be made jointly on behalf of multiple students, or is it strictly tied to exactly one student
+2. Booking — Equipment: How many historical or future bookings can reference the same equipment item over time (`0..*`)
+3. Staff Member — Booking: Is each booking reviewed by exactly one assigned staff member, or can multiple staff members review the same request
+4. Staff Member — Equipment: Can multiple staff members manage the same equipment item, or is equipment divided among specific staff
+
+
+
+## Part F — Model Verification
+
+### Task F1: Requirements-to-Model Check Table
+
+| Requirement | Where represented in diagram? | Fully represented? |
+| :--- | :--- | :--- |
+| FR01 | Student — Booking association | Partially Student side multiplicity requires confirmation |
+| FR02 | Booking — Equipment association with 1 at Equipment end | Yes |
+| FR03 | startDate and endDate attributes in Booking class | Yes |
+| FR04 | Staff Member — Booking association review | Partially Reviewer assignment rule unconfirmed |
+| FR05 | Staff Member — Equipment association manages availability of | Yes |
+| FR06 | Candidate status attribute in Booking class | Needs clarification Approval workflow logic not detailed |
+
+### Task F2: Model Reflection
+Transitioning from Use Case and Activity models to the Domain Model helped isolate core business entities from workflow actions. It highlighted that key attributes like dates belong strictly to the `Booking` class rather than the `Equipment` or `Student` classes.

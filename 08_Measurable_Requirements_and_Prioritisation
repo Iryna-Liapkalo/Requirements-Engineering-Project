@@ -24,4 +24,8 @@ NFR-C03 Privacy/Security: When a standard student user attempts to view the book
 Student submits request:Must Have — Core transactional capability; system cannot function without it.
 Staff approves/rejects:Must Have — Essential governance and compliance workflow.
 Reminder notification:Should Have — High value for reducing late returns, but manual workarounds exist.
-Automatic conflict prevention:Unconfirmed / Won't Have (this release) — Complex automated logic is deferred pending stakeholder confirmation.
+Automatic conflict prevention:Unconfirmed / Won't Have (this release) — Complex automated logic is deferred pending stakeholder confirmation
+
+
+## 4. Conclusion:
+Week 8 translated vague quality goals into testable NFR candidates and applied MoSCoW prioritization to define a realistic MVP scope, ensuring an objective, verifiable specification ready for stakeholder validation.

@@ -1,1 +1,9 @@
+Project: College Equipment Booking System
+User Journey: A student browsing equipment, viewing details, submitting a booking request with start and end dates, handling incomplete input, and receiving a pending review acknowledgement.
 
+Screen Sequence & Requirements Mapping:
+1. Browse equipment (Screen 1)  Linked to EB01 (Students can view available equipment)
+2. Equipment details (Screen 2)  Supports selecting an item for EB02
+3. Request equipment (Screen 3)  Linked to EB03 (Records start and end dates) & EB04 (Staff review stage)
+4. Missing-date feedback (Screen 4)  Candidate validation behavior (needs confirmation)
+5. Request submitted (Screen 5)  Linked to EB04 (Staff review acknowledgement, does not imply automatic approval)

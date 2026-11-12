@@ -1,0 +1,27 @@
+# Week 8 — Measurable Requirements and Prioritisation
+
+## 1. Week 8 Evidence Note
+### Confirmed Facts (Lecturer Case):
+1. A student can make more than one booking request (FR01).
+2. Each booking concerns exactly one equipment item (FR02).
+3. Booking records contain a start date and end date (FR03).
+4. Staff review and approve or reject booking requests (FR04).
+
+### Open Questions / Unconfirmed Rules:
+1. What are the exact rules for handling overlapping date ranges for the same equipment item?
+2. Are automated notification reminders required for upcoming pickups or returns?
+
+
+
+## 2. Measurable NFR Candidates (Part C)
+NFR-C01 Performance: With up to 25 concurrent users browsing and submitting requests [Condition], at least 95% of request-submission actions shall complete within 2 seconds [Measurable Outcome], measured using simulated HTTP timing tools [Checking Method]. *(Source: [PROPOSED — confirm with stakeholders])*
+NFR-C02 Accessibility: When navigating the equipment request journey using only a keyboard (Tab/Enter) Condition, a user shall be able to complete the submission flow successfully in alignment with WCAG 2.2 SC 2.1.1 [Measurable Outcome], checked via manual keyboard walkthrough [Checking Method]. *(Source: [PROPOSED — confirm with stakeholders])*
+NFR-C03 Privacy/Security: When a standard student user attempts to view the booking records or contact details of other students Condition, the system shall block access and restrict visibility strictly to authorized Technicians and Admins [Measurable Outcome], checked via role-based permission testing [Checking Method]. *(Source: [PROPOSED — confirm with stakeholders])*
+
+
+
+## 3. MoSCoW Prioritisation (Part D)
+Student submits request:Must Have — Core transactional capability; system cannot function without it.
+Staff approves/rejects:Must Have — Essential governance and compliance workflow.
+Reminder notification:Should Have — High value for reducing late returns, but manual workarounds exist.
+Automatic conflict prevention:Unconfirmed / Won't Have (this release) — Complex automated logic is deferred pending stakeholder confirmation.

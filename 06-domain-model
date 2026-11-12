@@ -17,15 +17,15 @@
 
 ### Task B1: Candidate Concept Table
 
-| Candidate | Class, Attribute, or Action? | Supporting Requirement |
-| :--- | :--- | :--- |
-| Student | Class | FR01 |
-| Booking | Class | FR01, FR02, FR03 |
-| Start date | Attribute | FR03 |
-| End date | Attribute | FR03 |
-| Equipment | Class | FR01, FR02, FR05 |
-| Review | Action | FR04 |
-| Staff Member | Class | FR04, FR05 |
+Candidate | Class, Attribute, or Action? | Supporting Requirement 
+
+Student | Class | FR01 
+Booking | Class | FR01, FR02, FR03 
+Start date | Attribute | FR03 
+End date | Attribute | FR03 
+Equipment | Class | FR01, FR02, FR05 
+Review | Action | FR04 
+Staff Member | Class | FR04, FR05 
 
 ### Task B2: Core Domain Classes Justification
 1. Student Represents the primary user who requests and holds equipment reservations within the system
@@ -64,14 +64,14 @@ Multiplicity of 1 is applied at the Equipment end of the Booking–Equipment ass
 
 ### Task F1: Requirements-to-Model Check Table
 
-| Requirement | Where represented in diagram? | Fully represented? |
-| :--- | :--- | :--- |
-| FR01 | Student — Booking association | Partially Student side multiplicity requires confirmation |
-| FR02 | Booking — Equipment association with 1 at Equipment end | Yes |
-| FR03 | startDate and endDate attributes in Booking class | Yes |
-| FR04 | Staff Member — Booking association review | Partially Reviewer assignment rule unconfirmed |
-| FR05 | Staff Member — Equipment association manages availability of | Yes |
-| FR06 | Candidate status attribute in Booking class | Needs clarification Approval workflow logic not detailed |
+Requirement | Where represented in diagram? | Fully represented
+
+FR01 | Student — Booking association | Partially Student side multiplicity requires confirmation 
+FR02 | Booking — Equipment association with 1 at Equipment end | Yes 
+FR03 | startDate and endDate attributes in Booking class | Yes 
+FR04 | Staff Member — Booking association review | Partially Reviewer assignment rule unconfirmed 
+FR05 | Staff Member — Equipment association manages availability of | Yes 
+FR06 | Candidate status attribute in Booking class | Needs clarification Approval workflow logic not detailed 
 
 ### Task F2: Model Reflection
 Transitioning from Use Case and Activity models to the Domain Model helped isolate core business entities from workflow actions. It highlighted that key attributes like dates belong strictly to the `Booking` class rather than the `Equipment` or `Student` classes.
